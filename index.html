@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meme Web Nyeleneh</title>
+    <title>DOT</title>
+    <link rel="icon" type="image/x-icon" href="img/1.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
     <style>
         /* Reset */
-        body, h1, h2, h3, p, ul {
+        body,
+        h1,
+        h2,
+        h3,
+        p,
+        ul {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -62,7 +69,12 @@
             padding: 100px 20px;
         }
 
-        .meme-gallery, .tokenomics, .roadmap, .info-section, .social-section, .copy-section {
+        .meme-gallery,
+        .tokenomics,
+        .roadmap,
+        .info-section,
+        .social-section,
+        .copy-section {
             background: #000;
             color: #c813ff;
         }
@@ -110,7 +122,10 @@
             margin-top: 20px;
         }
 
-        .about-section, .tokenomics, .roadmap, .info-section {
+        .about-section,
+        .tokenomics,
+        .roadmap,
+        .info-section {
             background: #000;
             text-align: center;
         }
@@ -152,20 +167,43 @@
 
         /* Animations */
         @keyframes backgroundShift {
-            0% { background-position: 0 0; }
-            50% { background-position: 100% 100%; }
-            100% { background-position: 0 0; }
+            0% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 100% 100%;
+            }
+
+            100% {
+                background-position: 0 0;
+            }
         }
 
         @keyframes textBounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
 
         @keyframes textGlitch {
-            0% { text-shadow: 2px 2px #00f7ff, -2px -2px #ffff00; }
-            50% { text-shadow: -2px -2px #00ffff, 2px 2px #00ffd5; }
-            100% { text-shadow: 2px 2px #ffff00, -2px -2px #00ffff; }
+            0% {
+                text-shadow: 2px 2px #00f7ff, -2px -2px #ffff00;
+            }
+
+            50% {
+                text-shadow: -2px -2px #00ffff, 2px 2px #00ffd5;
+            }
+
+            100% {
+                text-shadow: 2px 2px #ffff00, -2px -2px #00ffff;
+            }
         }
 
         /* Info Section */
@@ -221,126 +259,145 @@
 
         /* Animasi Bounce */
         @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
     </style>
 </head>
+
 <body>
 
-<!-- Navbar -->
-<nav class="crazy-navbar">
-    <ul>
-        <li><a href="#home">🔥Home</a></li>
-        <li><a href="#about">🎭About</a></li>
-        <li><a href="#tokenomics">💰Tokenomics</a></li>
-        <li><a href="#roadmap">🗺️Roadmap</a></li>
-        <li><a href="#meme">🤪Meme</a></li>
-    </ul>
-</nav>
+    <!-- Navbar -->
+    <nav class="crazy-navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#tokenomics">Tokenomics</a></li>
+            <li><a href="#roadmap">Roadmap</a></li>
+            <li><a href="#meme">Meme</a></li>
+        </ul>
+    </nav>
 
-<!-- Hero Section -->
-<header id="home" class="hero-section">
-    <h1 class="crazy-title">Meme Web Nyeleneh😂</h1>
-    <div class="hero-content">
-        <h2>Welcome to the Most Absurd Web</h2>
-        <p>Experience memes like never before!</p>
+    <!-- Hero Section -->
+    <header id="home" class="hero-section">
+        <h1 class="crazy-title">$DOT</h1>
+        <div class="hero-content">
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <div class="about-section" id="about">
+        <h2>About $DOT</h2>
+        <p>DOT is a sleek character designed with a futuristic aesthetic that emphasizes simplicity and strength. The
+            name "DOT" symbolizes precision and focus, reflecting the character's ability to connect the dots and bring
+            clarity to complex situations.</p>
+        <div class="copy-section">
+            <p id="copy-text">CA: XXXXXXXXXXXXXXXXXXXX</p>
+            <button id="copy-button" onclick="copyText()">COPY CA</button>
+        </div>
     </div>
-</header>
 
-<!-- About Section -->
-<div class="about-section" id="about">
-    <h2>About Us</h2>
-    <p>Welcome to Meme Web Nyeleneh, the most absurd and fun place to explore memes and creative web design!</p>
-    <p>Here, we believe in chaos with style, offering you a blend of quirky memes and delightful designs.</p>
+    <!-- Tokenomics Section -->
+    <div class="tokenomics" id="tokenomics">
+        <h2>Tokenomics</h2>
+        <p>Token Name = DOG OF TREN</p>
+        <p>TICKER = $DOT</p>
+        <p>TOTAL SUPPLY = 1,000,000,000</p>
+        <p>LIQUIDITY POOL BURNED = 100%</p>
+    </div>
+
+    <!-- Roadmap Section -->
+    <div class="roadmap" id="roadmap">
+        <h2>HOW TO BUY</h2>
+        <ul>
+            <li>Phase 1: Download Phantom Wallet</li>
+            <li>Phase 2: Buy Solana On Your CEX</li>
+            <li>Phase 3: Trade On Pump.fun</li>
+        </ul>
+    </div>
+
+    <!-- Meme Gallery Section -->
+    <div class="meme-gallery" id="meme">
+        <h2 class="crazy-title">DOG OF TREN!</h2>
+        <div class="meme-grid">
+            <div class="meme">
+                <div class="meme-images">
+                    <img src="img/1.jpg"
+                        alt="Meme 2">
+                    <img src="img/2.jpg"
+                        alt="Meme 2">
+                    <img src="img/3.jpg"
+                        alt="Meme 3">
+                </div>
+            </div>
+            <div class="meme">
+                <div class="meme-images">
+                    <img src="img/4.jpg"
+                        alt="Meme 2">
+                    <img src="img/1.jpg"
+                        alt="Meme 2">
+                    <img src="img/2.jpg"
+                        alt="Meme 2">
+                    <img src="img/3.jpg"
+                        alt="Meme 2">
+                    <img src="img/4.jpg"
+                        alt="Meme 2">
+                    <img src="img/1.jpg"
+                        alt="Meme 2">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social Section -->
+    <div class="social-section">
+        <h2>Follow With Us</h2>
+        <div class="social-icons">
+            <a href="https://x.com/dotoftren">
+                <img src="https://www.freepnglogos.com/uploads/twitter-x-logo-png/twitter-x-logo-png-9.png"
+                    alt="Twitter" width="50px"></a>
+            </a>
+            <a href="https://t.me/dogoftrensol">
+                <img src="https://logodownload.org/wp-content/uploads/2017/11/telegram-logo-8.png" alt="Telegram"
+                    width="50px"></a>
+            </a>
+            <a href="https://pump.fun">
+                <img src="https://static.vecteezy.com/system/resources/previews/021/819/342/non_2x/fun-green-pill-free-png.png"
+                    alt="Pump.fun" width="50px"></a>
+            </a>
+        </div>
+    </div>
+
+    <!-- Copy Section -->
     <div class="copy-section">
-        <p id="copy-text">CA: XXXXXXXXXXXXXXXXXXXX</p>
-        <button id="copy-button" onclick="copyText()">Salin Teks</button>
+        <button id="copy-button" onclick="copyText()">COPY CA</button>
     </div>
-</div>
 
-<!-- Tokenomics Section -->
-<div class="tokenomics" id="tokenomics">
-    <h2>Tokenomics</h2>
-    <p>Token Name = $JUCE</p>
-    <p>TICKER = $JUCE</p>
-    <p>TOTAL SUPPLY = 1,000,000,000</p>
-    <p>LIQUIDITY POOL BURNED = 100%</p>
-</div>
-
-<!-- Roadmap Section -->
-<div class="roadmap" id="roadmap">
-    <h2>Roadmap</h2>
-    <ul>
-        <li>Phase 1: Meme Creation</li>
-        <li>Phase 2: Marketing Campaign</li>
-        <li>Phase 3: Community Building</li>
-        <li>Phase 4: Expansion to Social Media</li>
-    </ul>
-</div>
-
-<!-- Meme Gallery Section -->
-<div class="meme-gallery" id="meme">
-    <h2 class="crazy-title">The Craziest Memes on the Web!</h2>
-    <div class="meme-grid">
-        <div class="meme">
-            <div class="meme-images">
-                <img src="https://img.freepik.com/free-photo/funny-face-kitty-looking-smiling-camera_1450-248.jpg" alt="Meme 2">
-                <img src="https://img.freepik.com/free-photo/funny-face-kitty-looking-smiling-camera_1450-248.jpg" alt="Meme 2">
-                <img src="https://img.freepik.com/free-photo/funny-face-kitty-looking-smiling-camera_1450-248.jpg" alt="Meme 2">
-            </div>
-        </div>
-        <div class="meme">
-            <div class="meme-images">
-                <img src="https://img.freepik.com/free-photo/funny-face-kitty-looking-smiling-camera_1450-248.jpg" alt="Meme 2">
-                <img src="https://img.freepik.com/free-photo/funny-face-kitty-looking-smiling-camera_1450-248.jpg" alt="Meme 2">
-                <img src="https://img.freepik.com/free-photo/funny-face-kitty-looking-smiling-camera_1450-248.jpg" alt="Meme 2">
-                <img src="https://img.freepik.com/free-photo/funny-face-kitty-looking-smiling-camera_1450-248.jpg" alt="Meme 2">
-                <img src="https://img.freepik.com/free-photo/funny-face-kitty-looking-smiling-camera_1450-248.jpg" alt="Meme 2">
-                <img src="https://img.freepik.com/free-photo/funny-face-kitty-looking-smiling-camera_1450-248.jpg" alt="Meme 2">
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Social Section -->
-<div class="social-section">
-    <h2>Connect With Us</h2>
-    <div class="social-icons">
-        <a href="https://twitter.com">
-            <img src="https://www.freepnglogos.com/uploads/twitter-x-logo-png/twitter-x-logo-png-9.png" alt="Twitter" width="50px"></a>
-        </a>
-        <a href="https://t.me">
-            <img src="https://logodownload.org/wp-content/uploads/2017/11/telegram-logo-8.png" alt="Telegram" width="50px"></a>
-        </a>
-        <a href="https://pump.fun">
-            <img src="https://static.vecteezy.com/system/resources/previews/021/819/342/non_2x/fun-green-pill-free-png.png" alt="Pump.fun" width="50px"></a>
-        </a>
-    </div>
-</div>
-
-<!-- Copy Section -->
-<div class="copy-section">
-    <button id="copy-button" onclick="copyText()">Salin Teks</button>
-</div>
-
-<!-- Footer -->
- <center>
-<footer>
-    <p>© 2024 Meme Web Nyeleneh. All rights reserved.</p>
-</footer>
-</center>
-<script>
-    function copyText() {
-        var copyText = document.getElementById("copy-text");
-        var range = document.createRange();
-        range.selectNode(copyText);
-        window.getSelection().removeAllRanges();
-        window.getSelection().addRange(range);
-        document.execCommand("copy");
-        alert("Text has been copied to clipboard!");
-    }
-</script>
+    <!-- Footer -->
+    <center>
+        <footer>
+            <p>© 2024 $DOT. All rights reserved.</p>
+        </footer>
+    </center>
+    <script>
+        function copyText() {
+            var copyText = document.getElementById("copy-text");
+            var range = document.createRange();
+            range.selectNode(copyText);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand("copy");
+            alert("Text has been copied to clipboard!");
+        }
+    </script>
 
 </body>
+
 </html>
