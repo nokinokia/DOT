@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Web Nyeleneh</title>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
+    <style>
+        /* Reset */
+        body, h1, h2, h3, p, ul {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Silkscreen', sans-serif;
+            background: linear-gradient(45deg, #0eebb3, #00ffff, #00eeff);
+            animation: backgroundShift 5s infinite;
+            color: #c813ff;
+        }
+
+        /* Navbar */
+        .crazy-navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: #000;
+            color: #c813ff;
+            font-size: 1.2em;
+        }
+
+        .crazy-navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        .crazy-navbar a {
+            color: #00ccff;
+            text-decoration: none;
+            font-weight: bold;
+            transform: rotate(-5deg);
+            transition: transform 0.3s;
+        }
+
+        .crazy-navbar a:hover {
+            transform: rotate(10deg) scale(1.2);
+        }
+
+        /* Sections */
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .hero-section {
+            background: #00aeff;
+            clip-path: polygon(0 0, 100% 20%, 100% 80%, 0 100%);
+            padding: 100px 20px;
+        }
+
+        .meme-gallery, .tokenomics, .roadmap, .info-section, .social-section, .copy-section {
+            background: #000;
+            color: #c813ff;
+        }
+
+        .meme-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .meme {
+            text-align: center;
+            margin: 20px auto;
+            padding: 20px;
+            border: 6px dashed #08ffde;
+            background: #000;
+            color: #fff;
+            max-width: 1000px;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .meme:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 10px 15px rgba(0, 0, 255, 0.5);
+        }
+
+        .meme-images img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            transition: transform 0.3s;
+        }
+
+        .meme-images img:hover {
+            transform: scale(1.3) rotate(5deg);
+        }
+
+        .crazy-caption {
+            font-size: 2em;
+            font-weight: bold;
+            text-shadow: 2px 2px #ff0;
+            margin-top: 20px;
+        }
+
+        .about-section, .tokenomics, .roadmap, .info-section {
+            background: #000;
+            text-align: center;
+        }
+
+        .crazy-title {
+            font-size: 2.5em;
+            color: #ffff00;
+            text-transform: uppercase;
+            text-shadow: 2px 2px #15ffd8;
+            animation: textGlitch 2s infinite;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+
+        .social-icons a:hover {
+            transform: rotate(360deg);
+        }
+
+        #copy-button {
+            padding: 10px 20px;
+            background: #000;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1em;
+            margin-top: 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        #copy-button:hover {
+            background: #ff0;
+            color: #000;
+        }
+
+        /* Animations */
+        @keyframes backgroundShift {
+            0% { background-position: 0 0; }
+            50% { background-position: 100% 100%; }
+            100% { background-position: 0 0; }
+        }
+
+        @keyframes textBounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes textGlitch {
+            0% { text-shadow: 2px 2px #00f7ff, -2px -2px #ffff00; }
+            50% { text-shadow: -2px -2px #00ffff, 2px 2px #00ffd5; }
+            100% { text-shadow: 2px 2px #ffff00, -2px -2px #00ffff; }
+        }
+
+        /* Info Section */
+        .info-section {
+            padding: 40px 20px;
+            margin: 20px 0;
+            clip-path: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
+        }
+
+        .info-section h2 {
+            font-size: 2.5em;
+            color: #2cf8ff;
+            text-shadow: 2px 2px #00ffff;
+        }
+
+        /* Social Section */
+        .social-section {
+            text-align: center;
+            padding: 20px;
+            background: #00ffff;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            display: inline-block;
+            animation: bounce 1.5s infinite;
+        }
+
+        /* Copy Section */
+        .copy-section {
+            text-align: center;
+            padding: 20px;
+            background: #05e2ff;
+            color: #c813ff;
+        }
+
+        #copy-button {
+            padding: 10px 20px;
+            background: #000;
+            color: #c813ff;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1em;
+            margin-top: 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        #copy-button:hover {
+            background: #ff0;
+            color: #000;
+        }
+
+        /* Animasi Bounce */
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="crazy-navbar">
+    <ul>
+        <li><a href="#home">🔥Home</a></li>
+        <li><a href="#about">🎭About</a></li>
+        <li><a href="#tokenomics">💰Tokenomics</a></li>
+        <li><a href="#roadmap">🗺️Roadmap</a></li>
+        <li><a href="#meme">🤪Meme</a></li>
+    </ul>
+</nav>
+
+<!-- Hero Section -->
+<header id="home" class="hero-section">
+    <h1 class="crazy-title">Meme Web Nyeleneh😂</h1>
+    <div class="hero-content">
+        <h2>Welcome to the Most Absurd Web</h2>
+        <p>Experience memes like never before!</p>
+    </div>
+</header>
+
+<!-- About Section -->
+<div class="about-section" id="about">
+    <h2>About Us</h2>
+    <p>Welcome to Meme Web Nyeleneh, the most absurd and fun place to explore memes and creative web design!</p>
+    <p>Here, we believe in chaos with style, offering you a blend of quirky memes and delightful designs.</p>
+    <div class="copy-section">
+        <p id="copy-text">CA: XXXXXXXXXXXXXXXXXXXX</p>
+        <button id="copy-button" onclick="copyText()">Salin Teks</button>
+    </div>
+</div>
+
+<!-- Tokenomics Section -->
+<div class="tokenomics" id="tokenomics">
+    <h2>Tokenomics</h2>
+    <p>Token Name = $JUCE</p>
+    <p>TICKER = $JUCE</p>
+    <p>TOTAL SUPPLY = 1,000,000,000</p>
+    <p>LIQUIDITY POOL BURNED = 100%</p>
+</div>
+
+<!-- Roadmap Section -->
+<div class="roadmap" id="roadmap">
+    <h2>Roadmap</h2>
+    <ul>
+        <li>Phase 1: Meme Creation</li>
+        <li>Phase 2: Marketing Campaign</li>
+        <li>Phase 3: Community Building</li>
+        <li>Phase 4: Expansion to Social Media</li>
+    </ul>
+</div>
+
+<!-- Meme Gallery Section -->
+<div class="meme-gallery" id="meme">
+    <h2 class="crazy-title">The Craziest Memes on the Web!</h2>
+    <div class="meme-grid">
+        <div class="meme">
+            <div class="meme-images">
+                <img src="https://img.freepik.com/free-photo/funny-face-kitty-looking-smiling-camera_1450-248.jpg" alt="Meme 2">
+                <img src="https://img.freepik.com/free-photo/funny-face-kitty-looking-smiling-camera_1450-248.jpg" alt="Meme 2">
+                <img src="https://img.freepik.com/free-photo/funny-face-kitty-looking-smiling-camera_1450-248.jpg" alt="Meme 2">
+            </div>
+        </div>
+        <div class="meme">
+            <div class="meme-images">
+                <img src="https://img.freepik.com/free-photo/funny-face-kitty-looking-smiling-camera_1450-248.jpg" alt="Meme 2">
+                <img src="https://img.freepik.com/free-photo/funny-face-kitty-looking-smiling-camera_1450-248.jpg" alt="Meme 2">
+                <img src="https://img.freepik.com/free-photo/funny-face-kitty-looking-smiling-camera_1450-248.jpg" alt="Meme 2">
+                <img src="https://img.freepik.com/free-photo/funny-face-kitty-looking-smiling-camera_1450-248.jpg" alt="Meme 2">
+                <img src="https://img.freepik.com/free-photo/funny-face-kitty-looking-smiling-camera_1450-248.jpg" alt="Meme 2">
+                <img src="https://img.freepik.com/free-photo/funny-face-kitty-looking-smiling-camera_1450-248.jpg" alt="Meme 2">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Social Section -->
+<div class="social-section">
+    <h2>Connect With Us</h2>
+    <div class="social-icons">
+        <a href="https://twitter.com">
+            <img src="https://www.freepnglogos.com/uploads/twitter-x-logo-png/twitter-x-logo-png-9.png" alt="Twitter" width="50px"></a>
+        </a>
+        <a href="https://t.me">
+            <img src="https://logodownload.org/wp-content/uploads/2017/11/telegram-logo-8.png" alt="Telegram" width="50px"></a>
+        </a>
+        <a href="https://pump.fun">
+            <img src="https://static.vecteezy.com/system/resources/previews/021/819/342/non_2x/fun-green-pill-free-png.png" alt="Pump.fun" width="50px"></a>
+        </a>
+    </div>
+</div>
+
+<!-- Copy Section -->
+<div class="copy-section">
+    <button id="copy-button" onclick="copyText()">Salin Teks</button>
+</div>
+
+<!-- Footer -->
+ <center>
+<footer>
+    <p>© 2024 Meme Web Nyeleneh. All rights reserved.</p>
+</footer>
+</center>
+<script>
+    function copyText() {
+        var copyText = document.getElementById("copy-text");
+        var range = document.createRange();
+        range.selectNode(copyText);
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+        document.execCommand("copy");
+        alert("Text has been copied to clipboard!");
+    }
+</script>
+
+</body>
+</html>
